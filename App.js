@@ -3,6 +3,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler';
+
+//import each screen
 import Splash from "./screens/Splash";
 import Onboarding from "./screens/Onboarding";
 import Home from "./screens/Home";
@@ -12,9 +15,12 @@ import Notifications from "./screens/Notifications";
 export default function App() {
   const MainNavigator = createStackNavigator();
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, }}>
       <NavigationContainer>
-        <MainNavigator.Navigator screenOptions={{headerShown: false}} initialRouteName="Splash">
+        <MainNavigator.Navigator 
+          screenOptions={{headerShown: false}}
+          initialRouteName="Home"
+          >
           <MainNavigator.Screen name="Splash" component={Splash}/>
           <MainNavigator.Screen name="Onboarding" component={Onboarding}/>
           <MainNavigator.Screen name="Home" component={Home}/>
