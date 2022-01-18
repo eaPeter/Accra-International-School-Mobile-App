@@ -1,8 +1,13 @@
 import React from "react";
-import { View } from "react-native";
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function Notifications(navigation){
-    return <View>
+export default function Notifications(params){
+    const navigation = params.navigation;
+
+    return (
+    <View>
         <Text>Lets goooo!</Text>
-    </View>;
+    </View>
+    );
 }
