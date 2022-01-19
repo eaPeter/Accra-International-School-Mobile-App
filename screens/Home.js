@@ -30,7 +30,7 @@ export default function Home(params){
 
         <Text style={styles.title}>Seek knowledge</Text>
 
-        <View style={{flexDirection: "row"}}>
+        <View style={{ flexDirection: "row" }}>
           <View style={styles.searchbox}>
             <View style={{ marginLeft: 15 }}>
               <Feather name="search" size={22} color="#A3A3A2" />
@@ -38,6 +38,24 @@ export default function Home(params){
 
             <Text style={styles.searchTxt}>Search</Text>
           </View>
+
+          <View style={styles.filter}>
+            <Image
+              style={{ width: 21.01, height: 19.79 }}
+              source={require("../assets/filterIcon.png")}
+            />
+          </View>
+        </View>
+
+        <View style={styles.subjectHead}>
+            <View style={{justifyContent: "flex-start"}}>
+            <Text style={styles.subjectName}>English Language</Text>
+            </View>
+            
+            <View style={{justifyContent: "flex-end"}}>
+            <Text style={styles.seeAll}>See all</Text>
+            </View>
+            
         </View>
       </View>
     );
@@ -90,5 +108,40 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: "#A3A3A2",
         paddingLeft: 10,
+        fontFamily: "Poppins",
+    },
+
+    filter: {
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#283054",
+        width: 45,
+        height: 45,
+        borderRadius: 5,
+        marginTop: 20,
+        marginLeft: 15,
+    },
+
+    subjectHead: {
+        flexDirection: "row",
+        marginLeft: 15,
+        marginTop: 20,
+        alignItems: "center",
+    },
+
+    subjectName: {
+        fontFamily: "Poppins",
+        fontSize: 16,
+        fontWeight: 650,
+        justifyContent: "flex-start",
+        //marginRight: 165,
+    },
+
+    seeAll: {
+        fontFamily: "Poppins",
+        fontSize: 14,
+        color: "#A3A3A2",
+        
     },
   });
