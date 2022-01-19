@@ -1,9 +1,10 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import 'react-native-gesture-handler';
+import { useFonts } from 'expo-font';
 
 //import each screen
 import Splash from "./screens/Splash";
@@ -12,10 +13,22 @@ import Home from "./screens/Home";
 import Tabs from "./screens/Tabs";
 import Notifications from "./screens/Notifications";
 
+const MainNavigator = createStackNavigator();
+
 export default function App() {
-  const MainNavigator = createStackNavigator();
+
+
+  const [loaded] = useFonts({
+    PoppinsLight: require('./assets/fonts/Poppins-Light.ttf'),
+    PoppinsMedium: require('./assets/fonts/Poppins-Medium.ttf'),
+    PoppinsRegular: require('./assets/fonts/Poppins-Regular.ttf'),
+    PoppinsSemiBold: require('./assets/fonts/Poppins-SemiBold.ttf'),
+  });
+  
+  if (!loaded) {
+    return null;
+  }
   return (
-    <View style={{flex: 1, }}>
       <NavigationContainer>
         <MainNavigator.Navigator 
           screenOptions={{headerShown: false}}
@@ -28,15 +41,6 @@ export default function App() {
           <MainNavigator.Screen name="Notifications" component={Notifications}/>
         </MainNavigator.Navigator>
       </NavigationContainer>
-    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

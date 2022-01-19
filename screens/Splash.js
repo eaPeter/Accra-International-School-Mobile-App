@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
     },
     schoolMotto: {
         fontSize: 14,
-        fontWeight: "regular",
         marginTop: 10,
       },
   });

@@ -22,7 +22,7 @@ export default function Onboarding(params){
             <Text style={styles.title}>Revise and learn ahead</Text>
             <Text style={{fontSize: 24, fontWeight: "bold", }}>anywhere</Text>
             <Text style={styles.sub}>Resources such as books and videos</Text>
-            <Text style={{fontSize: 16, fontWeight: "regular", }}>are available at no cost.</Text>
+            <Text style={{fontSize: 16, }}>are available at no cost.</Text>
 
             <View style={{flexDirection: 'row', }}>
                 <View style={styles.rectangleMain}/>
@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
 
     sub: {
         fontSize: 16,
-        fontWeight: "regular",
         marginTop: 10,
       },
 
@@ -108,7 +107,7 @@ const styles = StyleSheet.create({
 
     skipTxt: {
         fontSize: 18,
-        fontWeight: 500,
+        fontWeight: '500',
         paddingTop: 10,
     },
   });

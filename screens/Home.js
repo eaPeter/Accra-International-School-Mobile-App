@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from 'react-native';
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { Ionicons, Feather } from '@expo/vector-icons';
 
 export default function Home(params){
@@ -8,19 +7,17 @@ export default function Home(params){
 
     return (
       <View style={styles.base}>
-        <View style={{ flexDirection: "row", marginTop: 43 }}>
-          <View style={{ flexDirection: "row", marginLeft: 15 }}>
+        <View style={styles.headerIconsWrapper}>
+
             <View style={styles.iconsEdit}>
               <Image
                 style={{ width: 24, height: 24 }}
                 source={require("../assets/moreIcon.png")}
               />
             </View>
-          </View>
+         
 
-          <View
-            style={{ flexDirection: "row", marginLeft: 255, marginRight: 15 }}
-          >
+          
             <View style={styles.iconsEdit}>
               <Ionicons
                 name="md-notifications-outline"
@@ -28,7 +25,7 @@ export default function Home(params){
                 color="#4D4D4D"
               />
             </View>
-          </View>
+      
         </View>
 
         <Text style={styles.title}>Seek knowledge</Text>
@@ -49,24 +46,24 @@ export default function Home(params){
 const styles = StyleSheet.create({
     base: {
         flex: 1,
-        //justifyContent: "center",
-        //alignItems: "center",
-        fontFamily: "Poppins",
+        paddingTop: 50,
+        paddingHorizontal: 10
     },
-
     title: {
       fontSize: 24,
-      fontWeight: "bold",
       marginTop: 30,
-      marginLeft: 15,
+      fontFamily: 'PoppinsSemiBold',
+      lineHeight: 36
     },
-
+    headerIconsWrapper: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between'
+    },
     schoolMotto: {
         fontSize: 16,
-        fontWeight: "regular",
         marginTop: 10,
       },
-
     iconsEdit: {
         flexDirection: "row",
         justifyContent: "center",
@@ -76,12 +73,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#C2C2C2",
         borderRadius: 45,
-        paddingHorizontal: 15,
     },
 
     searchbox: {
         flexDirection: "row",
-        marginLeft: 15,
         width: 285,
         height: 45,
         borderRadius: 5,
