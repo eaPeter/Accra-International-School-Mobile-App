@@ -132,7 +132,6 @@ const styles = StyleSheet.create({
 
     subjectName: {
         fontSize: 16,
-        justifyContent: "flex-start",
     },
 
     seeAll: {
