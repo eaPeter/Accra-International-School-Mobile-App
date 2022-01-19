@@ -131,15 +131,11 @@ const styles = StyleSheet.create({
     },
 
     subjectName: {
-        fontFamily: "Poppins",
         fontSize: 16,
-        fontWeight: 650,
         justifyContent: "flex-start",
-        //marginRight: 165,
     },
 
     seeAll: {
-        fontFamily: "Poppins",
         fontSize: 14,
         color: "#A3A3A2",
         
