@@ -9,10 +9,22 @@ export default function Notifications(params){
     return (
     <View style={styles.base}>
         <View style={styles.headerIconsWrapper}>
-         <View style={styles.iconsEdit}>
+             <View style={styles.iconsEdit}>
             <Ionicons name="chevron-back" size={24} color="#4D4D4D" />
+            </View>
+            <View style={{flexDirection: "row", justifyContent: "center", alignItems: "center", }}>
             <Text style={styles.title}>Notifications</Text>
+            </View>
         </View>
+    
+    
+        <View style={styles.content}>
+            <Image
+                style={{ width: 300.55, height: 300 }}
+                source={require("../assets/notification.png")}
+            />
+            <Text style={styles.noNotificationsTxt}>No notifications yet!</Text>
+            <Text>Retry later to check for any new notifications</Text>
         </View>
     </View>
     );
@@ -39,7 +51,7 @@ const styles = StyleSheet.create({
     headerIconsWrapper: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        //justifyContent: 'space-between',
     },  
 
     iconsEdit: {
@@ -51,5 +63,21 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#C2C2C2",
         borderRadius: 45,
+    },
+
+    content: {
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
+    noNotificationsTxt: {
+        fontSize: 18,
+        fontFamily: "PoppinsMedium",
+    },
+
+    retryTxt: {
+        fontSize: 14,
+        fontFamily: "PoppinsRegular",
+        marginTop: 10,
     },
   });

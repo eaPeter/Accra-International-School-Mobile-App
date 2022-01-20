@@ -49,11 +49,11 @@ export default function Home(params){
 
         <View style={styles.subjectHead}>
             <View style={{justifyContent: "flex-start"}}>
-            <Text style={styles.subjectName}>English Language</Text>
+                <Text style={styles.subjectName}>English Language</Text>
             </View>
             
             <View style={{justifyContent: "flex-end"}}>
-            <Text style={styles.seeAll}>See all</Text>
+                <Text style={styles.seeAll}>See all</Text>
             </View>
             
         </View>
@@ -124,18 +124,18 @@ const styles = StyleSheet.create({
 
     subjectHead: {
         flexDirection: "row",
-        marginLeft: 15,
         marginTop: 20,
         alignItems: "center",
     },
 
     subjectName: {
         fontSize: 16,
+        fontFamily: 'PoppinsMedium',
     },
 
     seeAll: {
         fontSize: 14,
         color: "#A3A3A2",
-        
+        fontFamily: 'PoppinsLight',
     },
   });
