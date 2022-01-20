@@ -1,9 +1,12 @@
-import React from "react";
-import { StyleSheet, Text, View, Image } from 'react-native';
+import React, {useState} from "react";
+import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 import { Ionicons, Feather } from '@expo/vector-icons';
 
-export default function Home(params){
-    const navigation = params.navigation;
+
+import {englishdata, mathdata} from '../assets/component/Data'
+
+export default function Home({navigation}){
+
 
     return (
       <View style={styles.base}>
@@ -30,13 +33,15 @@ export default function Home(params){
 
         <Text style={styles.title}>Seek knowledge</Text>
 
-        <View style={{ flexDirection: "row" }}>
+        <View style={{ flexDirection: "row", alignItems:'center', width: '100%' }}>
           <View style={styles.searchbox}>
-            <View style={{ marginLeft: 15 }}>
-              <Feather name="search" size={22} color="#A3A3A2" />
-            </View>
+            
+            <Feather name="search" size={24} color="#A3A3A2" style={{marginLeft: 15}}/>
 
-            <Text style={styles.searchTxt}>Search</Text>
+            <TextInput 
+            placeholder="search"
+            style={styles.searchTxt}
+            />
           </View>
 
           <View style={styles.filter}>
@@ -48,14 +53,15 @@ export default function Home(params){
         </View>
 
         <View style={styles.subjectHead}>
-            <View style={{justifyContent: "flex-start"}}>
+            
             <Text style={styles.subjectName}>English Language</Text>
-            </View>
-            
-            <View style={{justifyContent: "flex-end"}}>
+  
             <Text style={styles.seeAll}>See all</Text>
-            </View>
             
+        </View>
+
+        <View>
+          <Image source={require('../assets/English2.jpg')} />
         </View>
       </View>
     );
@@ -65,7 +71,7 @@ const styles = StyleSheet.create({
     base: {
         flex: 1,
         paddingTop: 50,
-        paddingHorizontal: 10
+        paddingHorizontal: 15,
     },
     title: {
       fontSize: 24,
@@ -95,8 +101,8 @@ const styles = StyleSheet.create({
 
     searchbox: {
         flexDirection: "row",
-        width: 285,
-        height: 45,
+        width: '82%',
+        height: 50,
         borderRadius: 5,
         borderWidth: 1,
         borderColor: "#A3A3A2",
@@ -108,7 +114,8 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: "#A3A3A2",
         paddingLeft: 10,
-        fontFamily: "Poppins",
+        fontFamily: 'PoppinsLight',
+        width: '100%'
     },
 
     filter: {
@@ -116,8 +123,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#283054",
-        width: 45,
-        height: 45,
+        width: 50,
+        height: 50,
         borderRadius: 5,
         marginTop: 20,
         marginLeft: 15,
@@ -125,18 +132,19 @@ const styles = StyleSheet.create({
 
     subjectHead: {
         flexDirection: "row",
-        marginLeft: 15,
         marginTop: 20,
         alignItems: "center",
+        justifyContent: 'space-between'
     },
 
     subjectName: {
         fontSize: 16,
+        fontFamily: 'PoppinsRegular'
     },
 
     seeAll: {
         fontSize: 14,
         color: "#A3A3A2",
-        
+        fontFamily: 'PoppinsLight'
     },
   });
