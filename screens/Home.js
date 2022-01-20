@@ -65,23 +65,22 @@ const styles = StyleSheet.create({
     base: {
         flex: 1,
         paddingTop: 50,
-        paddingHorizontal: 10
+        paddingHorizontal: 15
     },
+
     title: {
       fontSize: 24,
       marginTop: 30,
       fontFamily: 'PoppinsSemiBold',
       lineHeight: 36
     },
+
     headerIconsWrapper: {
       flexDirection: 'row',
       alignItems: 'center',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
     },
-    schoolMotto: {
-        fontSize: 16,
-        marginTop: 10,
-      },
+
     iconsEdit: {
         flexDirection: "row",
         justifyContent: "center",

@@ -32,7 +32,7 @@ export default function App() {
       <NavigationContainer>
         <MainNavigator.Navigator 
           screenOptions={{headerShown: false}}
-          initialRouteName="Home"
+          initialRouteName="Notifications"
           >
           <MainNavigator.Screen name="Splash" component={Splash}/>
           <MainNavigator.Screen name="Onboarding" component={Onboarding}/>
