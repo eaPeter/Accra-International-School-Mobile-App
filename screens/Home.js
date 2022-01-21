@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 import { Ionicons, Feather } from '@expo/vector-icons';
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 
 import {englishdata, mathdata} from '../assets/component/Data'
@@ -11,24 +12,26 @@ export default function Home({navigation}){
     return (
       <View style={styles.base}>
         <View style={styles.headerIconsWrapper}>
+          <View style={styles.iconsEdit}>
+            <Image
+              style={{ width: 24, height: 24 }}
+              source={require("../assets/moreIcon.png")}
+            />
+          </View>
 
-            <View style={styles.iconsEdit}>
-              <Image
-                style={{ width: 24, height: 24 }}
-                source={require("../assets/moreIcon.png")}
-              />
-            </View>
-         
-
-          
-            <View style={styles.iconsEdit}>
+          <View style={styles.iconsEdit}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("Notifications");
+              }}
+            >
               <Ionicons
                 name="md-notifications-outline"
                 size={24}
                 color="#4D4D4D"
               />
-            </View>
-      
+            </TouchableOpacity>
+          </View>
         </View>
 
         <Text style={styles.title}>Seek knowledge</Text>

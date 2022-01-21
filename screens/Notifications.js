@@ -7,26 +7,41 @@ export default function Notifications(params){
     const navigation = params.navigation;
 
     return (
-    <View style={styles.base}>
-        <View style={styles.headerIconsWrapper}>
-             <View style={styles.iconsEdit}>
-            <Ionicons name="chevron-back" size={24} color="#4D4D4D" />
+      <View style={styles.base}>
+        <View>
+          <View style={styles.headerIconsWrapper}>
+            <View style={{ position: "absolute", left: 15 }}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate("Home");
+                }}
+              >
+                <View style={styles.iconsEdit}>
+                  <Ionicons name="chevron-back" size={24} color="#4D4D4D" />
+                </View>
+              </TouchableOpacity>
             </View>
-            <View style={{flexDirection: "row", justifyContent: "center", alignItems: "center", }}>
-            <Text style={styles.title}>Notifications</Text>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Text style={styles.title}>Notifications</Text>
             </View>
+          </View>
         </View>
-    
-    
+
         <View style={styles.content}>
-            <Image
-                style={{ width: 300.55, height: 300 }}
-                source={require("../assets/notification.png")}
-            />
-            <Text style={styles.noNotificationsTxt}>No notifications yet!</Text>
-            <Text>Retry later to check for any new notifications</Text>
+          <Image
+            style={{ width: 300.55, height: 300 }}
+            source={require("../assets/notification.png")}
+          />
+          <Text style={styles.noNotificationsTxt}>No notifications yet!</Text>
+          <Text>Retry later to check for any new notifications</Text>
         </View>
-    </View>
+      </View>
     );
 }
 
@@ -51,7 +66,7 @@ const styles = StyleSheet.create({
     headerIconsWrapper: {
         flexDirection: 'row',
         alignItems: 'center',
-        //justifyContent: 'space-between',
+        justifyContent: 'center',
     },  
 
     iconsEdit: {
@@ -68,6 +83,7 @@ const styles = StyleSheet.create({
     content: {
         justifyContent: "center",
         alignItems: "center",
+        height: "80%",
     },
 
     noNotificationsTxt: {
