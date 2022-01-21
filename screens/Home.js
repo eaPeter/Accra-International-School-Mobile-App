@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Ionicons, Feather } from '@expo/vector-icons';
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function Home(params){
     const navigation = params.navigation;
@@ -19,11 +20,14 @@ export default function Home(params){
 
           
             <View style={styles.iconsEdit}>
+            <TouchableOpacity  onPress={() => {navigation.navigate("Notifications");
+                }}>
               <Ionicons
                 name="md-notifications-outline"
                 size={24}
                 color="#4D4D4D"
               />
+                </TouchableOpacity>
             </View>
       
         </View>
@@ -40,10 +44,13 @@ export default function Home(params){
           </View>
 
           <View style={styles.filter}>
+            
             <Image
               style={{ width: 21.01, height: 19.79 }}
               source={require("../assets/filterIcon.png")}
             />
+
+            
           </View>
         </View>
 
