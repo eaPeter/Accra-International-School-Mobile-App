@@ -8,30 +8,30 @@ export default function Notifications(params){
 
     return (
       <View style={styles.base}>
-          <View>
+        <View>
           <View style={styles.headerIconsWrapper}>
-              
-          <View style={{position: "absolute", left: 15}}>
-          <TouchableOpacity  onPress={() => {navigation.navigate("Home");
-                }}>
-          <View style={styles.iconsEdit}>
-              <Ionicons name="chevron-back" size={24} color="#4D4D4D" />
+            <View style={{ position: "absolute", left: 15 }}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate("Home");
+                }}
+              >
+                <View style={styles.iconsEdit}>
+                  <Ionicons name="chevron-back" size={24} color="#4D4D4D" />
+                </View>
+              </TouchableOpacity>
             </View>
-          </TouchableOpacity>
-            
-          </View>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Text style={styles.title}>Notifications</Text>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Text style={styles.title}>Notifications</Text>
+            </View>
           </View>
         </View>
-          </View>
-        
 
         <View style={styles.content}>
           <Image

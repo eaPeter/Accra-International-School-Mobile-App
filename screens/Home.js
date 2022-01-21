@@ -9,27 +9,26 @@ export default function Home(params){
     return (
       <View style={styles.base}>
         <View style={styles.headerIconsWrapper}>
+          <View style={styles.iconsEdit}>
+            <Image
+              style={{ width: 24, height: 24 }}
+              source={require("../assets/moreIcon.png")}
+            />
+          </View>
 
-            <View style={styles.iconsEdit}>
-              <Image
-                style={{ width: 24, height: 24 }}
-                source={require("../assets/moreIcon.png")}
-              />
-            </View>
-         
-
-          
-            <View style={styles.iconsEdit}>
-            <TouchableOpacity  onPress={() => {navigation.navigate("Notifications");
-                }}>
+          <View style={styles.iconsEdit}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("Notifications");
+              }}
+            >
               <Ionicons
                 name="md-notifications-outline"
                 size={24}
                 color="#4D4D4D"
               />
-                </TouchableOpacity>
-            </View>
-      
+            </TouchableOpacity>
+          </View>
         </View>
 
         <Text style={styles.title}>Seek knowledge</Text>
@@ -44,25 +43,16 @@ export default function Home(params){
           </View>
 
           <View style={styles.filter}>
-            
             <Image
               style={{ width: 21.01, height: 19.79 }}
               source={require("../assets/filterIcon.png")}
             />
-
-            
           </View>
         </View>
 
         <View style={styles.subjectHead}>
-            <View style={{justifyContent: "flex-start"}}>
-                <Text style={styles.subjectName}>English Language</Text>
-            </View>
-            
-            <View style={{justifyContent: "flex-end"}}>
-                <Text style={styles.seeAll}>See all</Text>
-            </View>
-            
+            <Text style={styles.subjectName}>English Language</Text>
+            <Text style={styles.seeAll}>See all</Text>
         </View>
       </View>
     );
@@ -133,6 +123,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         marginTop: 20,
         alignItems: "center",
+        justifyContent: "space-between",
     },
 
     subjectName: {
