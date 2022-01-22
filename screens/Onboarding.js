@@ -20,9 +20,9 @@ export default function Onboarding(params){
                 source={require('../assets/Learning.png')}/>
 
             <Text style={styles.title}>Revise and learn ahead</Text>
-            <Text style={{fontSize: 24, fontWeight: "bold", }}>anywhere</Text>
+            <Text style={{fontSize: 24, fontFamily: 'PoppinsSemiBold' }}>anywhere</Text>
             <Text style={styles.sub}>Resources such as books and videos</Text>
-            <Text style={{fontSize: 16, }}>are available at no cost.</Text>
+            <Text style={{fontSize: 16, fontFamily: 'PoppinsRegular' }}>are available at no cost.</Text>
 
             <View style={{flexDirection: 'row', }}>
                 <View style={styles.rectangleMain}/>
@@ -31,12 +31,12 @@ export default function Onboarding(params){
             </View>
 
             <TouchableOpacity
-                onPress={() => {navigation.navigate("Home");
-                }}
-                style={[styles.btn, shadowStyle]}
+            activeOpacity={0.6}
+                onPress={() => {navigation.navigate("Drawer")}}
+                style={styles.btn}
                 >
-                    <Text style={styles.btnText}>Next</Text>
-                    <Ionicons name="chevron-forward" size={22} color="white" />
+                <Text style={styles.btnText}>Next</Text>
+                <Ionicons name="chevron-forward" size={22} color="white" />
             </TouchableOpacity>
 
             <Text style={styles.skipTxt}>Skip</Text>
@@ -50,18 +50,18 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        fontFamily: "Poppins",
     },
 
     title: {
       fontSize: 24,
-      fontWeight: "bold",
+      fontFamily: 'PoppinsSemiBold',
       marginTop: 20,
     },
 
     sub: {
         fontSize: 16,
         marginTop: 10,
+        fontFamily: 'PoppinsRegular'
       },
 
     rectangleMain: {
@@ -95,19 +95,29 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: "center",
         alignItems: "center",
-        textAlign: "center",
+        shadowColor: '#283054',
+        shadowOffset: {
+            width: 0,
+            height: 4,
+        },
+        shadowOpacity: 0.30,
+        shadowRadius: 4.65,
+
+        elevation: 8,
     },
 
     btnText: {
+        fontFamily: 'PoppinsSemiBold',
         fontSize: 18,
-        fontWeight: "bold",
         color: "white",
         marginRight: 4,
+        marginTop: 4
     },
 
     skipTxt: {
+        fontFamily: 'PoppinsMedium',
         fontSize: 18,
         fontWeight: '500',
-        paddingTop: 10,
+        marginTop: 20,
     },
   });

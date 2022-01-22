@@ -1,10 +1,14 @@
-import React from "react";
-import { StyleSheet, Text, View, Image,  TouchableOpacity} from 'react-native';
-//import { TouchableOpacity } from "react-native-gesture-handler";
+import React, {useEffect} from "react";
+import { StyleSheet, Text, View, Image } from 'react-native';
 
+export default function Splash({navigation}){
+    
 
-export default function Splash(params){
-    const navigation = params.navigation;
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate("Onboarding")
+        }, 2000)
+    })
 
     return (
         <View style={styles.base}>
@@ -14,15 +18,6 @@ export default function Splash(params){
 
             <Text style={styles.schoolName}>Accra International School</Text>
             <Text style={styles.schoolMotto}>Training our leaders for today</Text>
-
-            <TouchableOpacity
-                onPress={() => {navigation.navigate("Onboarding");
-                }}
-                style={{height: 50, width: 100, marginTop: 30, backgroundColor: "red", justifyContent: "center",
-                alignItems: "center",}}
-                >
-                    <Text>Continue</Text>
-            </TouchableOpacity>
         </View>
     );
 }
@@ -33,14 +28,14 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        fontFamily: "Poppins",
     },
     schoolName: {
       fontSize: 24,
-      fontWeight: "bold",
+      fontFamily: "PoppinsSemiBold",
       marginTop: 30,
     },
     schoolMotto: {
+        fontFamily: "PoppinsRegular",
         fontSize: 14,
         marginTop: 10,
       },
