@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { StyleSheet, Text, View, Image, TextInput, FlatList, ScrollView, TouchableOpacity } from 'react-native';
 import { Ionicons, Feather, AntDesign } from '@expo/vector-icons';
 
@@ -18,7 +18,7 @@ export default function Home({navigation}){
     {
         id: 2,
         image: require("../assets/English2.jpg"),
-        title: 'Learn to Speak Good English',
+        title: 'Learn to Speak Good English - Mark Lenon',
         edition: 'Primary Edition',
         rating: '4.0',
     }
