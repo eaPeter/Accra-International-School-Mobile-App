@@ -29,7 +29,7 @@ export default function Home({navigation}){
     {
         id: 1,
         image: require("../assets/math1.jpg"),
-        title: 'Know your numbers - For kids',
+        title: 'Advanced Mathematics Support Program',
         edition: 'Kindergarten Edition',
         rating: '4.0',
     },
@@ -70,7 +70,7 @@ export default function Home({navigation}){
 
   const renderData = ({item}) => {
     return(
-      <View style={{width: 230, marginRight: 20, borderRadius: 10, marginLeft: item.id === 1 ? 15 : 0}}>
+      <View style={{width: 230, height: 256, marginRight: 20, borderRadius: 10, marginLeft: item.id === 1 ? 15 : 0}}>
           <View style={styles.imageWrapper}>
             <Image source={item.image} style={styles.image}/>
           </View>
@@ -78,12 +78,12 @@ export default function Home({navigation}){
           <Text style={styles.tutorialTitle}>{item.title}</Text>
 
           <View style={{position: 'absolute', bottom: 0}}>
-          <Text style={styles.edition}>{item.edition}</Text>
+            <Text style={styles.edition}>{item.edition}</Text>
 
-          <View style={styles.ratingsWrapper}>
-            <Text style={styles.ratings}>{item.rating}</Text>
-            {renderAppropriateStarCount(item.rating)}
-          </View>
+            <View style={styles.ratingsWrapper}>
+              <Text style={styles.ratings}>{item.rating}</Text>
+              {renderAppropriateStarCount(item.rating)}
+            </View>
           </View>
       </View>
     )
@@ -287,15 +287,13 @@ const styles = StyleSheet.create({
     },
     tutorialTitle: {
       fontFamily: "PoppinsMedium",
-      fontSize: 15,
+      fontSize: 14,
       marginTop: 15,
-      paddingRight: 30
     },
     edition: {
       fontFamily: "PoppinsRegular",
       opacity: 0.45,
       fontSize: 13,
-      marginTop: 5
     },
     ratingsWrapper: {
       flexDirection: 'row',
