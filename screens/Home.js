@@ -1,7 +1,6 @@
 import React, {useState} from "react";
-import { StyleSheet, Text, View, Image, TextInput, FlatList, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, FlatList, ScrollView, TouchableOpacity } from 'react-native';
 import { Ionicons, Feather, AntDesign } from '@expo/vector-icons';
-import { TouchableOpacity } from "react-native-gesture-handler";
 
 
 export default function Home({navigation}){
@@ -93,15 +92,21 @@ export default function Home({navigation}){
     return (
       <View style={styles.base}>
         <View style={styles.headerIconsWrapper}>
-          <View style={styles.iconsEdit}>
+          <TouchableOpacity 
+          activeOpacity={0.7}
+          style={styles.iconsEdit}
+          onPress={() => navigation.openDrawer()}
+          >
+
             <Image
               style={{ width: 24, height: 24 }}
               source={require("../assets/moreIcon.png")}
             />
-          </View>
+          </TouchableOpacity>
 
           <View style={styles.iconsEdit}>
             <TouchableOpacity
+            activeOpacity={0.7}
               onPress={() => {
                 navigation.navigate("Notifications");
               }}

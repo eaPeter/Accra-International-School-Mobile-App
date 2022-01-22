@@ -3,33 +3,24 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Ionicons, } from '@expo/vector-icons';
 
-export default function Notifications(params){
-    const navigation = params.navigation;
+export default function Notifications({navigation}){
 
     return (
       <View style={styles.base}>
         <View>
           <View style={styles.headerIconsWrapper}>
-            <View style={{ position: "absolute", left: 15 }}>
+            
               <TouchableOpacity
+              activeOpacity={0.8}
+              style={styles.iconsEdit}
                 onPress={() => {
-                  navigation.navigate("Home");
+                  navigation.navigate("Drawer");
                 }}
               >
-                <View style={styles.iconsEdit}>
-                  <Ionicons name="chevron-back" size={24} color="#4D4D4D" />
-                </View>
+                <Ionicons name="chevron-back" size={24} color="#4D4D4D" />
               </TouchableOpacity>
-            </View>
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+              
               <Text style={styles.title}>Notifications</Text>
-            </View>
           </View>
         </View>
 
@@ -50,23 +41,20 @@ const styles = StyleSheet.create({
     base: {
         flex: 1,
         paddingTop: 50,
-        paddingHorizontal: 15
+        paddingHorizontal: 15,
+        backgroundColor: 'white'
     },
 
     title: {
         fontSize: 24,
-        //marginTop: 30,
         fontFamily: 'PoppinsSemiBold',
         lineHeight: 36,
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
+        marginLeft: 60
     },
     
     headerIconsWrapper: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
     },  
 
     iconsEdit: {
@@ -89,6 +77,7 @@ const styles = StyleSheet.create({
     noNotificationsTxt: {
         fontSize: 18,
         fontFamily: "PoppinsMedium",
+        marginTop: 20
     },
 
     retryTxt: {
