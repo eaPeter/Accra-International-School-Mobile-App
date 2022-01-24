@@ -10,7 +10,6 @@ import { useFonts } from 'expo-font';
 import Splash from "./screens/Splash";
 import Onboarding from "./screens/Onboarding";
 import Home from "./screens/Home";
-import Tabs from "./screens/Tabs";
 import Notifications from "./screens/Notifications";
 import SideDrawer from './assets/components/Drawer';
 
@@ -37,8 +36,7 @@ export default function App() {
           >
           <MainNavigator.Screen name="Splash" component={Splash}/>
           <MainNavigator.Screen name="Onboarding" component={Onboarding}/>
-          {/* <MainNavigator.Screen name="Home" component={Home}/>
-          <MainNavigator.Screen name="Tabs" component={Tabs}/> */}
+          {/* <MainNavigator.Screen name="Home" component={Home}/>*/}
           <MainNavigator.Screen name="Notifications" component={Notifications}/>
           <MainNavigator.Screen name="Drawer" component={SideDrawer}/>
         </MainNavigator.Navigator>

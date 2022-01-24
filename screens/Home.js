@@ -62,7 +62,7 @@ export default function Home({navigation}){
           <AntDesign name="star" size={12} color="#FFC700" style={styles.star}/>
           <AntDesign name="star" size={12} color="#FFC700" style={styles.star}/>
           <AntDesign name="star" size={12} color="#FFC700" style={styles.star}/>
-          <AntDesign name="staro" size={12} color="#FFC700" style={styles.star}/>
+          <AntDesign name="star" size={12} color="#FFC700" style={styles.star}/>
         </View>
       )
     }
