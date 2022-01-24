@@ -1,7 +1,5 @@
 import 'react-native-gesture-handler';
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useFonts } from 'expo-font';
@@ -9,7 +7,6 @@ import { useFonts } from 'expo-font';
 //import each screen
 import Splash from "./screens/Splash";
 import Onboarding from "./screens/Onboarding";
-import Home from "./screens/Home";
 import Notifications from "./screens/Notifications";
 import SideDrawer from './assets/components/Drawer';
 
@@ -36,7 +33,6 @@ export default function App() {
           >
           <MainNavigator.Screen name="Splash" component={Splash}/>
           <MainNavigator.Screen name="Onboarding" component={Onboarding}/>
-          {/* <MainNavigator.Screen name="Home" component={Home}/>*/}
           <MainNavigator.Screen name="Notifications" component={Notifications}/>
           <MainNavigator.Screen name="Drawer" component={SideDrawer}/>
         </MainNavigator.Navigator>
