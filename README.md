@@ -15,9 +15,9 @@ Contributor: Sylvester Abiah
 </p>
 
 ![Mockup Image](assets/Mockup/mockup1.png)
-![Mockup Image](../Mockup/mockup 2.png)
-![Mockup Image](../Mockup/mockup 3.png)
-![Mockup Image](../Mockup/mockup 4.png)
-![Mockup Image](../Mockup/mockup 5.png)
-![Mockup Image](../Mockup/mockup last.png)
+![Mockup Image](assets/Mockup/mockup2.png)
+![Mockup Image](assets/Mockup/mockup3.png)
+![Mockup Image](assets/Mockup/mockup4.png)
+![Mockup Image](assets/Mockup/mockup5.png)
+![Mockup Image](assets/Mockup/mockup_last.png)
 
