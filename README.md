@@ -14,7 +14,7 @@ The app has been built with react native. Codes to the app can be found at #gith
 Contributor: Sylvester Abiah
 </p>
 
-![Mockup Image](../Mockup/mockup 1.png)
+![Mockup Image](..assets/Mockup/mockup1.png)
 ![Mockup Image](../Mockup/mockup 2.png)
 ![Mockup Image](../Mockup/mockup 3.png)
 ![Mockup Image](../Mockup/mockup 4.png)
